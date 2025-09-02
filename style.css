@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right bottom, #ffa585, #45c5d8);
+    color: #9a1717;
+    font-weight: 600;
+}
+
+.container {
+    border: 1px solid #ffffff;
+    border-radius: 12px;
+    padding: 30px 35px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1); /* subtle transparent background */
+    box-shadow: 8px 8px 16px #909090,8px 8px 0px#575757; /* visible shadow */
+    backdrop-filter: blur(10px); /* optional glassmorphism effect */
+}
+.container h1{
+    font-size: 1.3.5 rem;
+    margin-block:8px;
+
+}
+.inputBOx{
+   position:relative; 
+}
+
+.inputBox span{
+    position:absolute;
+    top:100px;
+    right:47px;
+    font-size: 28px;
+    color:#000;
+    cursor:pointer;
+    
+}
+.inputBox span:hover{
+    color:#579999
+}
+.passBox{
+    background-color: #fff;
+    border: none;
+    outline:none;
+    padding : 10px;
+    width: 300px;
+        border-color: #579999;
+    border-radius: 6px;
+    border-width: 1px;
+    font-size: 20px;
+    margin-block:9px;
+}
+input[type="range" i] {
+    appearance: auto;
+    cursor: default;
+    color:rgb(99, 160, 239);
+     width:300px;
+    margin: 2px;
+
+}
+.row{
+    display:flex;
+    margin-block:9px;
+    color:#fcfcfc;
+    /* align-items: center; */
+}
+.row p{
+    text-align: center;
+    color:rgb(5, 32, 32)
+}
+.row p,.row label{
+    flex-basis:95%;
+    font-size:18px ;
+}
+ .row input[type = "checkbox"]{
+    width:20px;
+    justify-content: center;
+    align-items:center;
+    padding:50px;
+ }
+ .button{
+    width:300px;
+    justify-content: center;
+    align-items:center;
+    height:50px;;
+    border-radius:20px;
+    border:#ffa585;
+    border-width:1px;
+    font-size: 19px;
+    margin-block: 10px;
+ }
+ .button:hover{
+   background-image: linear-gradient(to right, rgb(255, 110, 127) 0%,
+    rgb(191, 233, 255) 51%, rgb(255, 110, 127) 100%);
+    color:white
+ }
+ 
