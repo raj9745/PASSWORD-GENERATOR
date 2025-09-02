@@ -15,6 +15,10 @@ inputSlider.addEventListener('input', () => {
 });
 
 genBtn.addEventListener('click', () => {
+   if (!lowercase.checked && !uppercase.checked && !numbers.checked && !symbols.checked) {
+    alert("Please select at least one option!");
+    return;
+  }
   passBox.value = generatePassword();
 });
 
@@ -45,16 +49,26 @@ function generatePassword() {
   return genPassword;
 }
 
+// Default checkboxes
+window.onload = () => {
+  lowercase.checked = true;
+  uppercase.checked = true;
+  numbers.checked = true;
+  symbols.checked = true;
+};
+
 // Copy password to clipboard
 copyIcon.addEventListener('click', () => {
   if (passBox.value !== "" && passBox.value.length >= 1) {
     navigator.clipboard.writeText(passBox.value);
     copyIcon.innerText = "check";
     copyIcon.title = "Password Copied";
+     copyIcon.style.color = "green";
 
     setTimeout(() => {
       copyIcon.innerText = "content_copy";
       copyIcon.title = "";
+      copyIcon.style.color = "#555"; // Reset color
     }, 3000);
   }
 });
